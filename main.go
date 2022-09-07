@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	// test jenkins
+	// test jenkins number 1
 	// fmt.Println("hello")
 	// token := os.Getenv("BOT_TOKEN")
 	// fmt.Println(token)
