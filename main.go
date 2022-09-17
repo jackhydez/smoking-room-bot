@@ -1,7 +1,7 @@
 package main
 
 import (
-	// "fmt"
+	"fmt"
 	"log"
 	"os"
 
@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	// test jenkins number 1
-	// fmt.Println("hello")
+	// test jenkins number 2
+	fmt.Println("hello")
 	// token := os.Getenv("BOT_TOKEN")
 	// fmt.Println(token)
 
