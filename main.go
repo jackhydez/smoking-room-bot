@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -9,8 +8,6 @@ import (
 )
 
 func main() {
-	// test jenkins number 2
-	fmt.Println("hello")
 	// token := os.Getenv("BOT_TOKEN")
 	// fmt.Println(token)
 
@@ -21,7 +18,7 @@ func main() {
 
 	bot.Debug = true
 
-	log.Printf("Authorized on account %s", bot.Self.UserName)
+	// log.Printf("Authorized on account %s", bot.Self.UserName)
 
 	u := tgbotapi.NewUpdate(0)
 	u.Timeout = 60
@@ -30,9 +27,14 @@ func main() {
 
 	for update := range updates {
 		if update.Message != nil { // If we got a message
-			log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
+			// log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
+
+			// test jenkins number 3
+			msg.Text = msg.Text + "!!!"
+			// fmt.Println(msg.Text)
+
 			msg.ReplyToMessageID = update.Message.MessageID
 
 			bot.Send(msg)
