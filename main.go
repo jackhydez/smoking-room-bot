@@ -32,7 +32,7 @@ func main() {
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
 
 			// test jenkins number 7
-			msg.Text = msg.Text + "!!!!!7"
+			msg.Text = msg.Text + "!!!!!8"
 			// fmt.Println(msg.Text)
 
 			msg.ReplyToMessageID = update.Message.MessageID
